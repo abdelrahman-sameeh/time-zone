@@ -23,7 +23,7 @@ btn.onclick=function(){
          result.innerHTML=`date is ${JSON.parse(this.responseText).datetime.slice(0 , 10)} & time is ${JSON.parse(this.responseText).datetime.slice(11 , -13)} in ${select.value}`
       }
    } 
-   myRequest.open("GET",`http://worldtimeapi.org/api/timezone/${select.value}` ) 
+   myRequest.open("GET",`https://worldtimeapi.org/api/timezone/${select.value}` ) 
    myRequest.send();
 }
 

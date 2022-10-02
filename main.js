@@ -20,12 +20,9 @@ btn.onclick=function(){
 
    myRequest.onreadystatechange = function() {
       if ( this.readyState === 4 && this.status === 200 ) {
-         console.log (JSON.parse(this.responseText).datetime) ;
          result.innerHTML=`date is ${JSON.parse(this.responseText).datetime.slice(0 , 10)} & time is ${JSON.parse(this.responseText).datetime.slice(11 , -13)} in ${select.value}`
-
       }
    } 
-   location.reload()
    myRequest.open("GET",`http://worldtimeapi.org/api/timezone/${select.value}` ) 
    myRequest.send();
 }

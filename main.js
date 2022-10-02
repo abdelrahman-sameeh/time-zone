@@ -25,6 +25,7 @@ btn.onclick=function(){
 
       }
    } 
+   location.reload()
    myRequest.open("GET",`http://worldtimeapi.org/api/timezone/${select.value}` ) 
    myRequest.send();
 }
